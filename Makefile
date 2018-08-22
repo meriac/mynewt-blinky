@@ -5,7 +5,10 @@ KEY_FILE_PUBLIC_IMPORT:=libs/ec256/src/$(KEY_FILE_PREFIX)_pub.c.import
 
 .PHONY: all build clean clean_all
 
-all: build
+all: install build
+
+install:
+	newt install
 
 load: build
 	newt load nrf52_boot
@@ -29,4 +32,5 @@ clean:
 	rm -rf bin
 
 clean_all: clean
+	rm -rf repos
 	rm -f $(KEY_FILE_PRIVATE) $(KEY_FILE_PUBLIC)

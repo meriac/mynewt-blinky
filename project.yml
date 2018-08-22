@@ -21,7 +21,6 @@ project.name: "mynewt-blinky"
 
 project.repositories:
     - apache-mynewt-core
-    - mcuboot
 
 # Use github's distribution mechanism for core ASF libraries.
 # This provides mirroring automatically for us.
@@ -31,9 +30,3 @@ repository.apache-mynewt-core:
     vers: 1.4.1
     user: apache
     repo: mynewt-core
-
-repository.mcuboot:
-    type: github
-    vers: 0-dev
-    user: runtimeco
-    repo: mcuboot
